@@ -1,0 +1,75 @@
+/* Custom styling */
+
+   /* Style the navigation links */
+   .footer-categories a,
+   .footer-links a {
+       text-decoration: none; /* Remove underline */
+       color: inherit; /* Inherit text color */
+   }
+
+   /* Optionally, add hover effect */
+   .footer-categories a:hover,
+   .footer-links a:hover {
+       color: #019501;
+   }
+   
+ .clickable-text {
+    cursor: pointer; /* Change cursor style */
+    /* Add any additional styling here */
+}
+
+.footer {
+    background:#666; 
+    padding: 30px 0;
+    text-align: center; 
+}
+
+.footer-categories, .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-categories li, .footer-links li {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 20px; 
+}
+
+.social-icons a {
+    color: #333; 
+    font-size: 24px; 
+    margin-right: 10px; 
+}
+
+.social-icons a:hover {
+    color: #4a09fc; 
+}
+
+.divider {
+    border-top: 1px solid #ccc;
+    margin: 20px 0; 
+}
+
+.copy-right {
+    margin-top: 20px;
+    text-align: center; /* Center align text */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .social-icons {
+        margin-top: 30px; 
+    }
+
+    .social-icons a {
+        font-size: 20px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-categories, .footer-links {
+        text-align: center; 
+    }
+}

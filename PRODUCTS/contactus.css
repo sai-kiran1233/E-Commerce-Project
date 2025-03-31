@@ -1,0 +1,75 @@
+/* Custom styling */
+body {
+    background-color: #f8f9fa;
+}
+
+.contact-container {
+    padding: 50px 20px;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-image {
+    height: 430px; 
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    border-radius: 4px;
+}
+
+.form-label {
+    float: left;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.btn-primary {
+    background-color: #331df8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Media Queries */
+
+/* Large devices (PC) */
+@media (min-width: 992px) {
+    .contact-container {
+        padding: 100px 20px; /* Adjust padding for large devices */
+    }
+}
+
+/* Middle devices (iPad or tablet) */
+@media (max-width: 991px) {
+    .contact-image {
+        height: 300px; /* Adjust image height for middle devices */
+    }
+}
+
+/* Small devices (phones) */
+@media (max-width: 767px) {
+    .contact-container {
+        padding: 30px 10px; /* Adjust padding for small devices */
+    }
+    .contact-image {
+        height: 200px; /* Adjust image height for small devices */
+    }
+}

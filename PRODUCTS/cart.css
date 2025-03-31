@@ -1,0 +1,72 @@
+
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.product-image {
+    max-width: 200px;
+    max-height: 200px; /* Limit the height of the image */
+    width: auto; /* Allow the width to adjust based on the height */
+}
+
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+}
+
+.item-section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: calc(100% - 1px); /* Subtracting the border width to make it equal to the summary section height */
+    background-color: rgb(247, 239, 10);
+}
+
+/* Adding this CSS rule to ensure the summary section has the same height as the item section */
+.col-md-4 {
+    height: calc(100% - 1px);
+}
+
+.item-heading {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+/* Primary color for the button */
+.btn-primary {
+    background-color: #331df8; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+/* Media Queries */
+
+/* Large devices (PC) */
+@media (min-width: 992px) {
+    .cart-container {
+        padding: 100px 20px; /* Adjust padding for large devices */
+    }
+}
+
+/* Middle devices (iPad or tablet) */
+@media (max-width: 991px) {
+    .cart-container {
+        padding: 80px 20px; /* Adjust padding for middle devices */
+    }
+}
+
+/* Small devices (phones) */
+@media (max-width: 767px) {
+    .cart-container {
+        padding: 50px 10px; /* Adjust padding for small devices */
+    }
+}

@@ -1,0 +1,116 @@
+/* Body background gradient */
+body {
+    background: linear-gradient(to right, #726b6b, #7b6060); /* Gradient background from light green to green */
+ }
+ 
+ /* Category heading */
+ .category-heading {
+    text-align: center; /* Center-align the text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    font-weight: bold; /* Bold font weight */
+    margin-top: 30px; /* Top margin */
+    margin-bottom: 10px; /* Bottom margin */
+    text-decoration: underline; /* Underline text */
+    font-size: 24px; /* Font size */
+   color: aliceblue;
+ }
+ 
+ /* Products container */
+ .products-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of flex items */
+    justify-content: space-around; /* Distribute items evenly with space around */
+    margin: 0 -10px; /* Negative margin to counteract padding on individual items */
+ }
+ 
+ /* Product card */
+ .product-card {
+    flex-basis: calc(20% - 20px); /* Set flex basis for each card */
+    background-color: #fff; /* White background color */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Box shadow for elevation */
+    padding: 15px; /* Padding around the card */
+    margin: 10px; /* Margin between cards */
+    text-align: center; /* Center-align content */
+    transition: transform 0.3s; /* Smooth transition on hover */
+ }
+ 
+ /* Hover effect on product card */
+ .product-card:hover {
+    transform: translateY(-10px); /* Move card up on hover */
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15); /* Adjusted box shadow */
+ }
+ 
+ /* Product image */
+ .product-card img {
+    width: 100%; /* Set image width to 100% */
+    max-height: 200px; /* Set maximum image height */
+    object-fit: cover; /* Cover image to fit container */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 15px; /* Bottom margin */
+ }
+ 
+ /* Product information */
+ .product-info {
+    margin-bottom: 15px; /* Bottom margin */
+ }
+ 
+ /* Product title */
+ .product-title {
+    margin-bottom: 5px; /* Bottom margin */
+    font-weight: 500; /* Font weight */
+ }
+ 
+ /* Product price */
+ .product-price {
+    margin-bottom: 10px; /* Bottom margin */
+    color: #444; /* Text color */
+ }
+ 
+ /* Product description */
+ .product-description {
+    color: #666; /* Text color */
+    line-height: 1.6; /* Line height */
+ }
+ 
+ /* Add to cart button */
+ .btn-add-to-cart {
+    display: inline-block; /* Display as inline-block */
+    margin-top: 15px; /* Top margin */
+    padding: 10px 30px; /* Padding */
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    text-transform: uppercase; /* Convert text to uppercase */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+ }
+ 
+ /* Hover effect on add to cart button */
+ .btn-add-to-cart:hover {
+    background-color: #019501; /* Adjusted background color on hover */
+ }
+ 
+ /* Media queries for responsive design */
+ 
+ /* Smaller screen (mobile) - 2 products per row */
+ @media (max-width: 767.98px) {
+    .product-card {
+        flex-basis: calc(50% - 20px); /* Set flex basis for smaller screens */
+    }
+ }
+ 
+ /* Medium screen (tablet) - 3 products per row */
+ @media (min-width: 768px) and (max-width: 1023.98px) {
+    .product-card {
+        flex-basis: calc(33.33% - 20px); /* Set flex basis for medium screens */
+    }
+ }
+ 
+ /* Larger screen (PC and laptop) - 5 products per row */
+ @media (min-width: 1024px) {
+    .product-card {
+        flex-basis: calc(20% - 20px); /* Set flex basis for larger screens */
+    }
+ }

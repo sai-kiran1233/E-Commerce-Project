@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.css"> 
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Main content of the page -->
+    <div id="form-container" class="container">
+        <h2 class="text-center mt-5 mb-4">Login</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form id="loginForm">
+              <div class="form-group">
+                <label for="email"><b>E-Mail:</b></label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your E-Mail" required>
+              </div>
+              <div class="form-group">
+                <label for="password"><b>Password:</b></label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your Password" required>
+              </div>
+              <button type="submit" class="btn btn-warning btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
+    </div>
+    <div id="footer-placeholder"></div>
+
+   <!-- These script tags are including external JavaScript libraries in your HTML document. Here's what
+   each library does: -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      //  To add functionality to the log in page 
+ $(document).ready(function() {
+    $('#loginForm').submit(function(e) {
+      e.preventDefault(); // prevent default form submission
+    
+        // Get input values
+          var email = $('#email').val().trim();
+          var password = $('#password').val().trim();
+    
+          // Check if email and password match
+          if (email === 'admin@admin.com' && password === '123456') {
+            alert('Login successful');
+          } else {
+            alert('Incorrect email or password');
+          }
+    
+          // Reset form fields
+          $('#email').val('');
+          $('#password').val('');
+       });
+    });
+
+    </script>
+</body>
+</html>

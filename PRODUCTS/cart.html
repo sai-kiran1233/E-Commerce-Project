@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css"> 
+
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <!-- Main content of the page -->
+    <div class="container cart-container">
+        <h2 class="text-center mt-5 mb-4">CART</h2>
+        <div class="row">
+            <!-- Items section -->
+            <div class="col-md-8">
+                <div class="item-section">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="shirt3.jpeg" alt="Product 1" class="product-image">
+                        </div>
+                        <div class="col-md-4">
+                            <h4 class="product-name">White Shirt</h4>
+                            <p class="product-price">Price: $10</p>
+                            <button class="btn btn-danger delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                        </div>
+                      <!-- The code snippet you provided represents a section in the HTML structure that
+                      allows users to adjust the quantity of a product in the shopping cart. Here's
+                      a breakdown of what each element does: -->
+                        <div class="col-md-4">
+                            <form class="quantity-form">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary decrease-btn" type="button"><i class="fas fa-minus"></i></button>
+                                    </div>
+                                    <input type="text" class="form-control quantity-input" value="1">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary increase-btn" type="button"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Summary section -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header"><b>Summary</b></div>
+                    <div class="card-body">
+                        <p id="product-price">Product Price: $10</p>
+                        <p id="shipping-price">Shipping: $5</p>
+                        <hr>
+                        <p id="total-price">Total: $15</p>
+                        <a href="index.html" class="btn btn-warning btn-block checkout-btn">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- The code snippet you provided at the end of the HTML document is including JavaScript libraries
+    and scripts. Here's what each part does: -->
+    <div id="footer-placeholder"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Decrease button
+        $('.decrease-btn').click(function() {
+            var input = $(this).closest('.quantity-form').find('.quantity-input');
+            var currentValue = parseInt(input.val());
+            if (currentValue > 1) {
+                input.val(currentValue - 1);
+            }
+        });
+
+        // Increase button
+        $('.increase-btn').click(function() {
+            var input = $(this).closest('.quantity-form').find('.quantity-input');
+            var currentValue = parseInt(input.val());
+            input.val(currentValue + 1);
+        });
+
+        // Delete button
+        $('.delete-btn').click(function() {
+            $(this).closest('.item-section').remove();
+        });
+
+        // Checkout button
+        $('.checkout-btn').click(function(event) {
+            event.preventDefault(); // Prevent the default action (e.g., following the link)
+            // Add your checkout logic here
+            alert('Checkout clicked!');
+        });
+    </script>
+</body>
+</html>
